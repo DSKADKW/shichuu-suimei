@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>四柱推命</title>
+  <title>四柱推命占い</title>
   <style>
     body {
       font-family: "Zen Maru Gothic", sans-serif;
@@ -49,7 +49,7 @@
   <div class="container">
     <h1>四柱推命鑑定 </h1>
     <p>はじめまして。
-四柱推命鑑定師として20年、これまでに数千名を超える方々の人生に寄り添い、宿命と運命のバランスを読み解いてまいりました。
+四柱推命鑑定師として20年、これまでに多くの方々の人生に寄り添い、宿命と運命のバランスを読み解いてまいりました。
 
 四柱推命は、東洋に古くから伝わる「命の地図」。
 生年月日と生まれた時間から導き出される宿命の中には、あなたが生まれ持った才能や気質、そして人生の流れまでもが精緻に記されています。
@@ -75,6 +75,7 @@
       <li>人相</li>
       <li>姓名判断</li>
       <li>四柱推命</li>
+      <li>九星気学</li>
  
     </ul>
 
