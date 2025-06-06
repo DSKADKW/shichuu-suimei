@@ -16,10 +16,49 @@
       color: #fff;
     }
 
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1em;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .menu-toggle {
+      cursor: pointer;
+      font-size: 2em;
+      color: #fff;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(0,0,0,0.8);
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      padding: 1em;
+      border-radius: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5em 0;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
     .container {
       background-color: rgba(0, 0, 0, 0.6);
       max-width: 800px;
-      margin: 3em auto;
+      margin: 5em auto 3em;
       padding: 2em;
       border-radius: 20px;
     }
@@ -46,22 +85,42 @@
       background-color: #ff66a3;
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav");
+      nav.classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
+  <header>
+    <div>占い鑑定</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav">
+      <a href="#home">ホーム</a>
+      <a href="#menu">メニュー</a>
+      <a href="#reserve">ご予約</a>
+      <a href="#access">住所</a>
+    </nav>
+  </header>
 
   <div class="container">
-    <h1>四柱推命鑑定 </h1>
-    <p>はじめまして。
+    <a name="home"></a>
+    <h1>四柱推命鑑定</h1>
+    <img src="https://github.com/eniwauranai/shichuu-suimei/blob/main/1EC05DF6-0CDC-46E3-8717-A1638D4D4A60.jpg?raw=true" alt="占い師の写真" style="width:200px; border-radius: 100px; margin-bottom: 1em;">
+
+    <p>
+      はじめまして。<br>
 四柱推命鑑定師として20年、これまでに多くの方々の人生に寄り添い、宿命と運命のバランスを読み解いてまいりました。
 
 四柱推命は、東洋に古くから伝わる「命の地図」。
 生年月日と生まれた時間から導き出される宿命の中には、あなたが生まれ持った才能や気質、そして人生の流れまでもが精緻に記されています。
 
 私の鑑定では、
-	•	本質（性格・強み・弱み）  
-	•	運気の流れ（いつ動くべきか、待つべきか）  
-	•	人間関係やパートナーシップの相性  
-	•	使命や天職  
+	•	本質（性格・強み・弱み）
+	•	運気の流れ（いつ動くべきか、待つべきか）
+	•	人間関係やパートナーシップの相性
+	•	使命や天職
 
 といったテーマに丁寧に光を当て、今必要な「気づき」と「選択のヒント」をお届けしています。
 
@@ -70,26 +129,38 @@
 
 現実的な一歩を踏み出したい方も、今の状況を見つめ直したい方も、どうぞ安心してご相談ください。
 心の奥にある想いをすくい上げ、あなたの未来が本来あるべき豊かさへと進んでいくよう、真心を込めて鑑定いたします。
-</p>
 
-    <h2>鑑定メニュー</h2>
-    <ul>
-      <li>手相</li>
-      <li>人相</li>
-      <li>姓名判断</li>
-      <li>四柱推命</li>
-      <li>九星気学</li>
-    </ul>
+    </p>
+    <p><strong>鑑定は女性限定でやらせて頂いております</strong></p>
 
-    <h2>料金</h2>
-    <ul>
-      <li>30分：3,000円（女性専用）</li>
-      <li>60分：5,000円</li>
-    </ul>
+    <a name="menu"></a>
+    <h2>料金・鑑定方法</h2>
+    <p>鑑定方法を問わず、1件（30分）3,000円にて鑑定させていただきます。</p>
 
+    <h3>手相・人相判断</h3>
+    <p>手の平に入っている線や肉付きや顔の作りからあなたの性格・才能資質・健康状態・運勢等の良否を占います。​</p>
+
+    <h3>姓名判断</h3>
+    <p>姓名判断は、姓と名の漢字の画数を元に
+
+その人の性格や人生の趨勢、適職、恋愛の傾向、結婚運・家庭運、かかりやすい病気など、一般に運勢として総称される
+
+吉凶の運勢を判断する占いです。​</p>
+
+    <h3>四柱推命</h3>
+    <p>太古の中国で生まれた「過去、現在、未来」を予見する運命学のひとつで陰陽五行説を基に、人が生まれながらにして持っている性格、能力、素質を理解し、あなたの努力や経験で変わる後天的な運命を予測する占いです。東洋占星術の中でも最も信頼性が高く「占いの帝王」と呼ばれています。
+
+ </p>
+
+
+    <a name="reserve"></a>
     <h2>ご予約はこちら</h2>
     <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdrfvwSGwe7gaWvylO8yEoTXdA4IThZ7BDu-35ThrKmnA_ofA/viewform?usp=dialog" target="_blank">▶ ご予約フォームへ</a>
-  </div>
 
+    <a name="access"></a>
+    <h2>住所・連絡先</h2>
+    <p>恵庭市島松東町1-9-13<br>
+    電話番号：09050787224</p>
+  </div>
 </body>
-</html>
+</html> 
